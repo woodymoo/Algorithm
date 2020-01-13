@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8a03c08-71c4-4990-9ce1-f50de39d0091" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WHANaWrhmJymKly4bnuCdKmHK5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="copyright.profiles" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8a03c08-71c4-4990-9ce1-f50de39d0091" name="Default Changelist" comment="" />
+      <created>1578796106607</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578796106607</updated>
+      <workItem from="1578796108174" duration="6868000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="105" key="#Java" timestamp="1578799571724">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="320" y="105" key="#Java/0.23.1440.830@0.23.1440.830" timestamp="1578799571724" />
+    <state x="320" y="105" key="#Project_Structure" timestamp="1578796186332">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="320" y="105" key="#Project_Structure/0.23.1440.830@0.23.1440.830" timestamp="1578796186332" />
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1578799764872">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.23.1440.830@0.23.1440.830" timestamp="1578799764872" />
+    <state x="432" y="106" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1578838618737">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="432" y="106" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.23.1440.830@0.23.1440.830" timestamp="1578838618737" />
+    <state x="584" y="343" key="Github.ShareDialog" timestamp="1578799672945">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="584" y="343" key="Github.ShareDialog/0.23.1440.830@0.23.1440.830" timestamp="1578799672945" />
+    <state x="221" y="77" key="SettingsEditor" timestamp="1578797595352">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1578797595352" />
+  </component>
+</project>
