@@ -32,7 +32,7 @@ public class Graph implements IGraph {
     }
 
     public void DFSTravers( Node startNode) {
-        //suedou code
+        ResetNodesVisited();
         System.out.print( startNode.getNodeId().toString() + "->");
         startNode.setVisited(true);
         Set<Map.Entry<Integer, Path>> pathEntries = paths.entrySet();
@@ -48,6 +48,7 @@ public class Graph implements IGraph {
      * start from all the nodes and travers the graph.
      */
     public void DFSTravers(){
+        ResetNodesVisited();
         Set<Map.Entry<Integer, Node>> entries = nodes.entrySet();
         for( Map.Entry<Integer, Node> entry : entries) {
             DFSTravers(entry.getValue());
@@ -55,6 +56,12 @@ public class Graph implements IGraph {
         }
     }
 
+    public void ResetNodesVisited(){
+        Set<Map.Entry<Integer, Node>> entries = nodes.entrySet();
+        for( Map.Entry<Integer, Node> entry : entries) {
+            entry.getValue().setVisited(false);
+        }
+    }
     /***
      * find a shortest path from a startnode to endnode
      * @param startNode
@@ -76,6 +83,7 @@ public class Graph implements IGraph {
         }
     }
 
+
     /***
      *
      * @param startNodeId
@@ -89,18 +97,107 @@ public class Graph implements IGraph {
      * use stack to travese graph, instead of recursive calls
      * In fact, the iterate mathod is BFS
      * https://www.hackerearth.com/zh/practice/algorithms/graphs/depth-first-search/tutorial/
-     *
-     * @param graph
-     * @param startNodeid
+     * 	DFS-iterative (G, s):                                   //Where G is graph and s is source vertex
+     *       let S be stack
+     *       S.push( s )            //Inserting s in stack
+     *       mark s as visited.
+     *       while ( S is not empty):
+     *           //Pop a vertex from stack to visit next
+     *           v  =  S.top( )
+     *          S.pop( )
+     *          //Push all the neighbours of v in stack that are not visited
+     *         for all neighbours w of v in Graph G:
+     *             if w is not visited :
+     *                      S.push( w )
+     *                     mark w as visited
+     * @param startNode
      */
-    public void DFSIterate(Graph graph, Integer startNodeid){
+    public void DFSIterate(Node startNode){
+//        Stack<Node> nodeStack = new Stack<Node>();
+//
+//        nodeStack.push(startNode);
+//        startNode.setVisited(true);
+//
+//        while( nodeStack.isEmpty() == false){
+//            //Pop a vertex from stack to visit next
+//            Node node = nodeStack.pop();
+//            VisitAndShow(node);
+//
+//            //Push all the neighbours of v in stack that are not visited
+//            for( Map.Entry<Integer, Path> pathEntry : paths.entrySet()) {
+//                Node neighborNode = pathEntry.getValue().endNode;
+//                if ( pathEntry.getValue().startNode == node
+//                    || neighborNode.getVisited() == false ){
+//                    nodeStack.push(neighborNode);
+//                    neighborNode.setVisited(true);
+//                    System.out.print( neighborNode.getNodeId() + "->");
+//                }
+//
+//            }
+//        }
         Stack<Node> nodeStack = new Stack<Node>();
+        ResetNodesVisited();
+
+        IterateNeighbors(nodeStack, startNode);
     }
 
+    private void IterateNeighbors(Stack<Node> nodeStack, Node startNode){
+        nodeStack.add(startNode);
+        do{
+            // 出栈
+            Node currentNode = nodeStack.pop();
+
+            // 如果该节点还没有被遍历，则遍历该节点并将子节点入栈
+            if( currentNode.getVisited() ==false){
+                // 遍历并打印
+                VisitAndShow(currentNode);
+                currentNode.setVisited(true);
+
+                // 没遍历的子节点入栈
+                for( Map.Entry<Integer, Path> pathEntry : paths.entrySet() ){
+                    if ( pathEntry.getValue().startNode == currentNode
+                            || pathEntry.getValue().endNode.getVisited() == false ){
+                        nodeStack.add(pathEntry.getValue().endNode);
+                    }
+
+                }
+
+            }
+        }while(!nodeStack.isEmpty());
+    }
+
+    public void DFSIterateTravers(){
+        Stack<Node> nodeStack = new Stack<Node>();
+        ResetNodesVisited();
+
+        for( Map.Entry<Integer, Node> nodeEntry : nodes.entrySet()){
+            if(nodeEntry.getValue().getVisited() == false ){
+                IterateNeighbors(nodeStack, nodeEntry.getValue());
+            }
+        }
+    }
+
+    private void VisitAndShow(Node node){
+        if ( node.getVisited() == false )
+            System.out.print(node.getNodeId() + "->");
+    }
     public static void main(String[] args) {
-        System.out.printf("Test");
+        test1();
+        test2();
+
+    }
+
+    public static void test1(){
+        System.out.printf("Test1:\n");
         Graph graph = new Graph();
         //graph.DFSTravers(graph.nodes.get(1));
         graph.DFSTravers(graph.nodes.get(1), graph.nodes.get(5));
+    }
+
+    public static void test2(){
+        System.out.printf("\nTest2:\n");
+        Graph graph = new Graph();
+        //graph.DFSIterate(graph.nodes.get(1));
+        graph.DFSIterateTravers();
     }
 }
