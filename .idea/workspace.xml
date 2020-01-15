@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8a03c08-71c4-4990-9ce1-f50de39d0091" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/github.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graph/GraphMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Graph/IGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/IGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Graph/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Graph/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,26 +59,30 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Application.Graph">
-    <configuration name="Graph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Graph.Graph" />
-      <module name="github" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.github">
     <configuration name="C:/s/s/learning/github" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="github" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,13 +101,8 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.C:/s/s/learning/github" />
-      <item itemvalue="Application.Graph" />
+      <item itemvalue="Gradle.github" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Graph" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -137,8 +127,17 @@
       <option name="presentableId" value="Default" />
       <updated>1578796106607</updated>
       <workItem from="1578796108174" duration="6868000" />
-      <workItem from="1578902689949" duration="5853000" />
+      <workItem from="1578902689949" duration="10699000" />
+      <workItem from="1579071250739" duration="2364000" />
     </task>
+    <task id="LOCAL-00001" summary="created dfs travese the graph">
+      <created>1578970671628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578970671628</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,34 +148,53 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="created dfs travese the graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="created dfs travese the graph" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="105" key="#Java" timestamp="1578799571724">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="105" key="#Java/0.23.1440.830@0.23.1440.830" timestamp="1578799571724" />
-    <state x="320" y="105" key="#Project_Structure" timestamp="1578796186332">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="320" y="105" key="#Project_Structure/0.23.1440.830@0.23.1440.830" timestamp="1578796186332" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578905724750">
+    <state x="427" y="103" key="#Project_Structure" timestamp="1579077137504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578905724750" />
+    <state x="427" y="103" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1579077137504" />
+    <state x="320" y="105" key="#Project_Structure/0.23.1440.830@0.23.1440.830" timestamp="1578796186332" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579077291766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579077291766" />
+    <state x="687" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579076922399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1579076922399" />
     <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1578799764872">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="533" y="150" key="#com.intellij.ide.util.MemberChooser/0.23.1440.830@0.23.1440.830" timestamp="1578799764872" />
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579077215365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579077215365" />
     <state x="576" y="104" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1578906461475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="576" y="104" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578906461475" />
     <state x="432" y="106" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.23.1440.830@0.23.1440.830" timestamp="1578838618737" />
+    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1578970670683">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578970670683" />
     <state x="574" y="181" key="FileChooserDialogImpl" timestamp="1578905630741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -185,27 +203,35 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="584" y="343" key="Github.ShareDialog/0.23.1440.830@0.23.1440.830" timestamp="1578799672945" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1578907021150">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1579068809630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578907021150" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1578907021149">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579068809630" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1579068809629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578907021149" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1578907021149">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579068809629" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1579068809629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578907021149" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1578907021150">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579068809629" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1579068809629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578907021150" />
-    <state x="295" y="68" key="SettingsEditor" timestamp="1578905789057">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579068809629" />
+    <state x="295" y="68" key="SettingsEditor" timestamp="1579077179636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="295" y="68" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578905789057" />
+    <state x="295" y="68" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579077179636" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1578797595352" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1578970685993">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578970685993" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1579071252431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579071252431" />
     <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578970618464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

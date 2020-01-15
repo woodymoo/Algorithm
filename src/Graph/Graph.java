@@ -48,6 +48,17 @@ public class Graph implements IGraph {
 
     }
 
+    /***
+     * use stack to travese graph, instead of recursive calls
+     * https://www.hackerearth.com/zh/practice/algorithms/graphs/depth-first-search/tutorial/
+     *
+     * @param graph
+     * @param startNodeid
+     */
+    public void DFSIterate(Graph graph, Integer startNodeid){
+
+    }
+
     public static void main(String[] args) {
         System.out.printf("Test");
         Graph graph = new Graph();
