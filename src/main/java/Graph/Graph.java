@@ -24,11 +24,11 @@ public class Graph implements IGraph {
         this.nodes.put(5, new Node(5));
 
         this.paths = new HashMap<Integer, Path>();
-        this.paths.put(1, new Path(1, this.nodes.get(1), this.nodes.get(2)));
-        this.paths.put(2, new Path(2, this.nodes.get(1), this.nodes.get(3)));
-        this.paths.put(3, new Path(3, this.nodes.get(2), this.nodes.get(4)));
-        this.paths.put(4, new Path(4, this.nodes.get(2), this.nodes.get(5)));
-
+        this.paths.put(1, new Path(1, this.nodes.get(1), this.nodes.get(2), 1.0));
+        this.paths.put(2, new Path(2, this.nodes.get(1), this.nodes.get(3), 1.0));
+        this.paths.put(3, new Path(3, this.nodes.get(2), this.nodes.get(4), 4.0));
+        this.paths.put(4, new Path(4, this.nodes.get(2), this.nodes.get(5),4.0));
+        this.paths.put(5, new Path(5, this.nodes.get(3), this.nodes.get(5),1.0));
     }
 
     public void DFSTravers( Node startNode) {
@@ -62,27 +62,6 @@ public class Graph implements IGraph {
             entry.getValue().setVisited(false);
         }
     }
-    /***
-     * find a shortest path from a startnode to endnode
-     * @param startNode
-     * @param endNode
-     */
-    public void DFSTravers(Node startNode, Node endNode){
-        System.out.print( startNode.getNodeId() + "->");
-        if ( startNode == endNode ){
-            return;
-        }
-
-        startNode.setVisited(true);
-        Set<Map.Entry<Integer, Path>> pathEntries = paths.entrySet();
-        for( Map.Entry<Integer, Path> pathEntry : pathEntries) {
-            if ( pathEntry.getValue().startNode == startNode
-                    && pathEntry.getValue().endNode.getVisited() == false) {
-                DFSTravers( pathEntry.getValue().endNode, endNode);
-            }
-        }
-    }
-
 
     /***
      *
@@ -181,6 +160,54 @@ public class Graph implements IGraph {
         if ( node.getVisited() == false )
             System.out.print(node.getNodeId() + "->");
     }
+
+
+    public void DFSRecursiveShortestPath(Node startNode, Node endNode){
+        Stack<Node> nodeStack = new Stack<Node>();
+        Double totalLength = 0.0;
+        DFSRecursive(nodeStack, startNode, endNode, totalLength );
+    }
+
+    private void ShowPath( Stack<Node> nodeStack ){
+        for( int i = 0; i< nodeStack.size(); i++){
+            System.out.print( "->" + nodeStack.get(i).getNodeId() );
+        }
+
+    }
+
+    private Double minTotalLength = 999999.0;
+
+    private void DFSRecursive(Stack<Node> nodeStack, Node startNode, Node endNode, Double totalLength){
+        nodeStack.push(startNode);
+        if ( startNode == endNode ) {
+                if ( minTotalLength > totalLength) {
+                    minTotalLength = totalLength;
+                }
+                ShowPath(nodeStack);
+                System.out.print(" Min Path = " + minTotalLength + "\n");
+                return;
+        }
+        for ( Map.Entry<Integer, Path> pathEntry : paths.entrySet()  ){
+            if ( pathEntry.getValue().startNode == startNode ){
+                if (pathEntry.getValue().endNode.getVisited() == false){
+                    pathEntry.getValue().endNode.setVisited(true);
+                    DFSRecursive(nodeStack,
+                            pathEntry.getValue().endNode,
+                            endNode,
+                            totalLength+ pathEntry.getValue().length);
+                    nodeStack.pop();
+                    pathEntry.getValue().endNode.setVisited(false);
+                }
+                else {
+                    ShowPath(nodeStack);
+                    System.out.print("  -----> node " + pathEntry.getValue().endNode.getNodeId() + " is not reachable.\n");
+                }
+            }
+
+        }
+
+
+    }
     public static void main(String[] args) {
         test1();
         test2();
@@ -191,13 +218,15 @@ public class Graph implements IGraph {
         System.out.printf("Test1:\n");
         Graph graph = new Graph();
         //graph.DFSTravers(graph.nodes.get(1));
-        graph.DFSTravers(graph.nodes.get(1), graph.nodes.get(5));
+        //graph.DFSTravers(graph.nodes.get(1), graph.nodes.get(5));
     }
 
     public static void test2(){
         System.out.printf("\nTest2:\n");
         Graph graph = new Graph();
         //graph.DFSIterate(graph.nodes.get(1));
-        graph.DFSIterateTravers();
+        //graph.DFSIterateTravers();
+        graph.DFSRecursiveShortestPath( graph.nodes.get(1),graph.nodes.get(5));
+        System.out.print("minTotalLength = " + graph.minTotalLength);
     }
 }
